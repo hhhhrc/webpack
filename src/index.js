@@ -1,13 +1,3 @@
-import style from './index.scss';
-import avatar from './avatar.jpg';
-
-import createAvatar from './createAvatar';
-
-createAvatar();
-
-var img = new Image();
-img.src = avatar;
-img.classList.add(style.avatar);
-
 var root = document.getElementById('root');
-root.append(img);
+import './index.scss';
+root.innerHTML = '<div class="iconfont iconicon-test"></div>';

@@ -28,13 +28,18 @@ module.exports = {
 						// 解决SCSS中import进来的scss文件不走下面两个loader
 						importLoaders: 2,
 						// 开启CSS模块化打包
-						modules: true
+						// modules: true
 					}
 				},
 				'sass-loader',
 				// 自动添加厂商前缀
 				'postcss-loader'
 			]
+		}, {
+			test: /\.(eot|ttf|svg|woff)$/,
+			use: {
+				loader: 'file-loader'
+			}
 		}],
 	},
 	output: {
